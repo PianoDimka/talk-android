@@ -108,7 +108,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
     implementation 'androidx.emoji:emoji-bundled:1.0.0'
     implementation 'androidx.palette:palette:1.0.0'
-    implementation "android.arch.work:work-runtime:${workVersion}"
+    implementation "android.arch.work:work-runtime:1.0.0-alpha12"
     implementation "android.arch.work:work-firebase:${workVersion}"
     androidTestImplementation "android.arch.work:work-testing:${workVersion}"
 
