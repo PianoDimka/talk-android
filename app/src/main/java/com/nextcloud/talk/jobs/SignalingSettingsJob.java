@@ -46,6 +46,7 @@ import javax.inject.Inject;
 import androidx.annotation.NonNull;
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
+import androidx.work.Result;
 import androidx.work.WorkManager;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
@@ -155,6 +156,6 @@ public class SignalingSettingsJob extends Worker {
         OneTimeWorkRequest websocketConnectionsWorker = new OneTimeWorkRequest.Builder(WebsocketConnectionsWorker.class).build();
         WorkManager.getInstance().enqueue(websocketConnectionsWorker);
 
-        return Result.SUCCESS;
+        return Result.success();
     }
 }

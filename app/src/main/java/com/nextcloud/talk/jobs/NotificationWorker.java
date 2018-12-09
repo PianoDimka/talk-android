@@ -81,6 +81,7 @@ import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.work.Data;
+import androidx.work.Result;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 import autodagger.AutoInjector;
@@ -509,6 +510,6 @@ public class NotificationWorker extends Worker {
         } catch (Exception exception) {
             Log.d(TAG, "Something went very wrong " + exception.getLocalizedMessage());
         }
-        return Result.SUCCESS;
+        return Result.success();
     }
 }

@@ -25,6 +25,7 @@ import android.content.Context;
 import com.nextcloud.talk.utils.PushUtils;
 
 import androidx.annotation.NonNull;
+import androidx.work.Result;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
@@ -42,6 +43,6 @@ public class PushRegistrationWorker extends Worker {
         pushUtils.generateRsa2048KeyPair();
         pushUtils.pushRegistrationToServer();
 
-        return Result.SUCCESS;
+        return Result.success();
     }
 }
